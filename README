@@ -1,0 +1,10 @@
+libtoolize --automake
+aclocal
+autoheader
+autoconf
+automake -a
+mkdir install
+cd install
+../configure --prefix=$(pwd)/../../
+make
+make install
