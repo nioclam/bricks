@@ -10,7 +10,9 @@
  */
 
 #include "byte.h"
+#include "piece.h"
 #include "coder.h"
+#include "cstrcoder.h"
 
 namespace bricks
 {

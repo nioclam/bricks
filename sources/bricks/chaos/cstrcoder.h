@@ -13,10 +13,10 @@ namespace bricks
 class CStrCoder : public Coder
 {
 public:
-    CStrCoder(Chaos *chaos, size_t position, Milestone *milestone = singleton<DefaultMilestone>());
+    CStrCoder(Chaos *chaos);
 
 public:
-    int format(const char *base, ...);
+    int code(const char *format, ...);
     char *cstr();
 };
 

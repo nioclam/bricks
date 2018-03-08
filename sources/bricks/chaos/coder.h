@@ -7,7 +7,6 @@
 
 #include <misc/misc.h>
 #include "byte.h"
-#include "defaultmilestone.h"
 
 /**
  * 程序员是混乱的制造者。
@@ -18,50 +17,28 @@ namespace bricks
 {
 
 class Chaos;
+
+/**
+ * 很遗憾，作为初级程序员，只能记住最后一次写的代码
+ */
 class Coder
 {
 public:
     /**
-     * @param chaos    混乱的世界
-     * @param position 开始制造混乱的位置
+     * 总是制造混乱，从chaos末尾开始写代码
      */
-    Coder(Chaos *chaos, size_t position, Milestone *milestone = singleton<DefaultMilestone>());
+    Coder(Chaos *chaos);
 
 public:
     /**
-     * 代码在这里
-     * 一般是chaos->access(position).first
+     * 最后一份源代码在这里
+     * 一般是chaos->access(m_position).first
      */
-    byte_t *code();
-
-    /**
-     * 代码的大小
-     */
-    size_t size();
-
-    /**
-     * 代码在chaos的起始位置
-     */
-    int lowerPosition();
-
-    /**
-     * 代码在chaos的结束位置
-     */
-    int upperPosition();
+    byte_t *source();
 
 protected:
-    /**
-     * 程序员做计划，麻烦（混乱）就更大了。
-     *
-     * @return -1 计划失败
-     */
-    int plan(size_t progress);
-
-protected:
-    Milestone *m_milestone;
-    Chaos     *m_chaos;
-    size_t     m_lowerPosition;
-    size_t     m_upperPosition;
+    Chaos  *m_chaos;
+    size_t  m_position;
 };
 
 }

@@ -6,41 +6,34 @@
  #include <cstrio>
  #include <cstrarg>
 
-CStrCoder::CStrCoder(Chaos *chaos, size_t position, Milestone *milestone = singleton<DefaultMilestone>())
-    : Coder(chaos, position, milestone)
-{
-    if (-1 == plan(position + 1))
-    {
-        throw std::bad_alloc();
-    }
+using namespace bricks;
 
-    // 预留一个位置放置'\0'
-    m_upper = position + 1;
+CStrCoder::CStrCoder(Chaos *chaos)
+    : Coder(chaos)
+{
 }
 
-int CStrCoder::format(const char *base, ...)
+int CStrCoder::code(const char *format, ...)
 {
+    size_t  length = 0;
     va_list vl;
-    va_start(vl, base);
+    va_start(vl, format);
 
-    auto length = vsprintf(nullptr, base, vl);
+    length     = vsprintf(nullptr, format, vl);
+    m_position = m_chaos->size();
 
-    if (-1 == plan(m_upper + length))
+    if (-1 == m_chaos->expand(m_position + length + 1)) // 1 for '\0'
     {
         va_end(vl);
         return -1;
     }
 
-    vsprintf(tail(), base, vl);
-    m_upper += size;
-
+    vsprintf(source(), format, vl);
     va_end(vl);
+    return 0;
 }
 
 char *CStrCoder::cstr()
 {
-    auto str = this->code();
-
-    str[m_upper - 1] = '\0';
-    return str;
+    return (char *)source();
 }
