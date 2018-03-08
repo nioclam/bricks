@@ -3,7 +3,7 @@
 
 AC_PREREQ([2.69])
 AC_INIT([bricks], [0.1.0-alpha])
-AC_CONFIG_SRCDIR([source/bricks.h])
+AC_CONFIG_SRCDIR([sources/bricks.h])
 AM_INIT_AUTOMAKE
 LT_INIT
 
@@ -29,4 +29,5 @@ AC_FUNC_ERROR_AT_LINE
 AC_FUNC_REALLOC
 
 AC_OUTPUT([Makefile
-		   source/Makefile])
+		   sources/Makefile])
+
