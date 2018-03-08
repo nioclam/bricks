@@ -5,6 +5,8 @@
 #ifndef __BRICKS_PHILOSOPHER_NAMED_H__
 #define __BRICKS_PHILOSOPHER_NAMED_H__ 1
 
+#include "philosopher.h"
+
 namespace bricks
 {
 
@@ -19,7 +21,7 @@ public:
     /**
      * Philosopher is who know 'who am I?'.
      */
-    virtual Buffer whoami();
+    virtual char *whoami(Chaos *chaos);
 
 protected:
     const char *m_name;

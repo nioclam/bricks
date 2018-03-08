@@ -5,7 +5,7 @@
 #ifndef __BRICKS_PHILOSOPHER_PHILOSOPHER_H__
 #define __BRICKS_PHILOSOPHER_PHILOSOPHER_H__ 1
 
-#include <bricks/byte/byte.h>
+#include <bricks/chaos/chaos.h>
 
 namespace bricks
 {
@@ -19,7 +19,7 @@ class Philosopher
     /**
      * Philosopher is who know 'who am I?'.
      */
-    virtual Buffer whoami() = 0;
+    virtual char *whoami(Chaos *chaos) = 0;
 };
 
 }

@@ -10,10 +10,10 @@
 namespace bricks
 {
 
-Buffer whereami(const char *file, size_t line);
+char *whereami(const char *file, size_t line, Chaos *chaos);
 
 }
 
-#define WHEREAMI whereami(__FILE__, __LINE__)
+#define WHEREAMI(chaos) whereami(__FILE__, __LINE__, chaos)
 
 #endif /* #ifndef __BRICKS_PHILOSOPHER_WHEREAMI_H__ */

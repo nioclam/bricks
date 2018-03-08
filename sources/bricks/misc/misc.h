@@ -13,8 +13,6 @@
 
 #include "coin.h"
 #include "failable.h"
-#include "journal.h"
-#include "holder.h"
 #include "singleton.h"
 
 #endif /* ifndef __BRICKS_MISC_MISC_H__ */

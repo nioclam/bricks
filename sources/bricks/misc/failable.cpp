@@ -16,7 +16,7 @@ bool Failable::failed()
 	return m_failed;
 }
 
-bool Failable::failed(bool failed)
+bool Failable::failAs(bool failed)
 {
 	if (failed)
 	{

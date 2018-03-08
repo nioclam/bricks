@@ -1,4 +1,7 @@
-
+﻿/**
+ * MIT License
+ * Copyright (C) 2018, Coin Lam.
+ */
 #include "piece.h"
 
 using namespace bricks;

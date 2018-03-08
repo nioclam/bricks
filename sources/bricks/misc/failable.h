@@ -32,11 +32,11 @@ public:
 	 * @return true  已经失败
 	 *         false 没有失败
 	 */
-	bool failAt(bool failed);
+	bool failAs(bool failed);
 
 	/**
 	 * 重置失败状态
-	 
+	 *
 	 * 吸取教训，重新出发
 	 */
 	void learnALesson();

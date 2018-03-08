@@ -17,30 +17,41 @@ namespace bricks
  * @return 返回utf8编码的string
  */
 template <typename DataType>
-Buffer whoami(DataType unknown, Chaos *chaos)
+char *whoami(DataType unknown, Chaos *chaos)
 {
-    auto name = chaos.next();
+    CStrCoder coder(chaos);
 
-    *chaos("#")(typeid(DataType).name())("\0");
-    chaos.format(u8"#%s", typeid(DataType).name());
+    if (-1 == coder.code("#%s", typeid(DataType).name()))
+    {
+        return "[WhoAmI?]";
+    }
+
+    return coder.cstr();
 }
 
 template <typename DataType>
-Buffer whoami<DataType *>(DataType *pointer)
+char *whoami<DataType *>(DataType *pointer, Chaos *chaos)
 {
-    return Buffer(u8"#%s@%p", typeid(DataType *), pointer);
+    CStrCoder coder(chaos);
+
+    if (-1 == coder.code("#%s@%p", typeid(DataType *).name(), pointer))
+    {
+        return "[WhoAmI?]";
+    }
+
+    return coder.cstr();
 }
 
 template <>
-Buffer whoami<Philosopher>(Philosopher &philosopher)
+Buffer whoami<Philosopher>(Philosopher &philosopher, Chaos *chaos)
 {
-    return philosopher.whoami();
+    return philosopher.whoami(chaos);
 }
 
 template <>
-Buffer whoami<Philosopher>(Philosopher *philosopher)
+Buffer whoami<Philosopher>(Philosopher *philosopher, Chaos *chaos)
 {
-    return philosopher->whoami();
+    return philosopher->whoami(chaos);
 }
 
 }

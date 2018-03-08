@@ -2,9 +2,9 @@
  * MIT License
  * Copyright (C) 2018, Coin Lam.
  */
+ #include <cstdio>
+ #include <cstdarg>
  #include "cstrcoder.h"
- #include <cstrio>
- #include <cstrarg>
 
 using namespace bricks;
 

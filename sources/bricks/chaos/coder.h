@@ -5,7 +5,7 @@
 #ifndef __BRICKS_CHAOS_CODER_H__
 #define __BRICKS_CHAOS_CODER_H__ 1
 
-#include <misc/misc.h>
+#include <bricks/misc/misc.h>
 #include "byte.h"
 
 /**
