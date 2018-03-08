@@ -11,6 +11,7 @@
 
 #include "byte.h"
 #include "piece.h"
+#include "block.h"
 #include "coder.h"
 #include "cstrcoder.h"
 
@@ -52,10 +53,9 @@ public:
     /**
      * 存取position开始的连续空间
      *
-     * @return result.first  position对应的内存地址
-     *         result.second 从position开始能够连续存取的长度
+     * @return 内存块。当Block.data() == nullptr，表示出错
      */
-    std::pair<byte_t *, size_t> access(int position);
+    Block access(int position);
 };
 
 }

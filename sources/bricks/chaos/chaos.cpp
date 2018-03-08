@@ -13,11 +13,11 @@ std::pair<byte_t *, size_t> Chaos::access(int position)
 
     if (nullptr == piece)
     {
-        return std::make_pair(nullptr, 0);
+        return Block(nullptr, 0);
     }
 
     auto data   = piece->data() + (position - piece->lowerPosition());
     auto length = piece->upperPosition - position;
 
-    return std::make_pair(data, length);
+    return Block(data, length);
 }

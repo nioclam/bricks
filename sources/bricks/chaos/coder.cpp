@@ -15,5 +15,5 @@ Coder::Coder(Chaos *chaos)
 
 byte_t *Coder::source()
 {
-    return m_chaos->access(m_position).first;
+    return m_chaos->access(m_position).data;
 }
