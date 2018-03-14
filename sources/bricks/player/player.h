@@ -9,6 +9,9 @@
 #include <functional>
 #include <bricks/chaos/chaos.h>
 
+// object依赖player，为了避免循环引用，仅仅引入ObjectPool接口
+#include "../object/objectpool.h"
+
 namespace bricks
 {
 
@@ -16,14 +19,16 @@ class Player : std::thread
 {
 public:
     Player();
+    Player(Player *that);
+    Player(Chaos *stringPool, ObjectPool *objectPool);
     Player(std::function<void()> game);
 
 protected:
     void play(std::function<void()> game);
 
 public:
-    Chaos      *m_stringPool;
-    ObjectPool *m_objectPool;
+    Chaos      *stringPool;
+    ObjectPool *objectPool;
 };
 
 extern thread_local Player *this_player;

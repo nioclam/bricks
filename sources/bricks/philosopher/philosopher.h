@@ -19,7 +19,7 @@ class Philosopher
     /**
      * Philosopher is who know 'who am I?'.
      */
-    virtual char *whoami(Chaos *chaos) = 0;
+    virtual char *whoami(Chaos *chaos = this_player->stringPool) = 0;
 };
 
 }

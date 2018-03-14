@@ -21,7 +21,7 @@ public:
     /**
      * Philosopher is who know 'who am I?'.
      */
-    virtual char *whoami(Chaos *chaos);
+    virtual char *whoami(Chaos *chaos = this_player->stringPool);
 
 protected:
     const char *m_name;

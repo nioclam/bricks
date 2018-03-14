@@ -17,7 +17,7 @@ namespace bricks
  * @return 返回utf8编码的string
  */
 template <typename DataType>
-char *whoami(DataType unknown, Chaos *chaos)
+char *whoami(DataType unknown, Chaos *chaos = this_player->stringPool)
 {
     CStrCoder coder(chaos);
 
@@ -30,7 +30,7 @@ char *whoami(DataType unknown, Chaos *chaos)
 }
 
 template <typename DataType>
-char *whoami<DataType *>(DataType *pointer, Chaos *chaos)
+char *whoami<DataType *>(DataType *pointer, Chaos *chaos = this_player->stringPool)
 {
     CStrCoder coder(chaos);
 
@@ -43,13 +43,13 @@ char *whoami<DataType *>(DataType *pointer, Chaos *chaos)
 }
 
 template <>
-Buffer whoami<Philosopher>(Philosopher &philosopher, Chaos *chaos)
+char *whoami<Philosopher>(Philosopher &philosopher, Chaos *chaos = this_player->stringPool)
 {
     return philosopher.whoami(chaos);
 }
 
 template <>
-Buffer whoami<Philosopher>(Philosopher *philosopher, Chaos *chaos)
+char *whoami<Philosopher>(Philosopher *philosopher, Chaos *chaos = this_player->stringPool)
 {
     return philosopher->whoami(chaos);
 }
