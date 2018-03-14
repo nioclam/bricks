@@ -25,14 +25,14 @@ class Coder
 {
 public:
     /**
-     * 总是制造混乱，从chaos末尾开始写代码
+     * 初级程序员总是从chaos末尾开始写代码
      */
     Coder(Chaos *chaos);
 
 public:
     /**
      * 最后一份源代码在这里
-     * 一般是chaos->access(m_position).first
+     * 一般是chaos->access(m_position).data
      */
     byte_t *source();
 

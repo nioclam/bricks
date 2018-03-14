@@ -16,6 +16,12 @@ namespace bricks
 class Block
 {
 public:
+    Block()
+        : data(nullptr)
+        , length(0)
+    {
+    }
+    
     Block(d, l)
         : data(d)
         , length(l)

@@ -3,15 +3,14 @@
  * Copyright (C) 2018, Coin Lam.
  */
 #include "chaos.h"
-#include <utility>
 
 using namespace bricks;
 
-std::pair<byte_t *, size_t> Chaos::access(int position)
+Block Chaos::access(int position)
 {
-    auto piece = locate(position);
+    Azrael<Piece> piece;
 
-    if (nullptr == piece)
+    if (-1 == piece.redeem(chaos.locate(position)))
     {
         return Block(nullptr, 0);
     }

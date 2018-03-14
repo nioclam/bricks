@@ -9,9 +9,11 @@
  * 混沌的世界，唯有盘古能够开天辟地
  */
 
+#include <bricks/azrael/azrael.h>
 #include "byte.h"
 #include "piece.h"
 #include "block.h"
+#include "chaosframe.h"
 #include "coder.h"
 #include "cstrcoder.h"
 
@@ -20,9 +22,16 @@ namespace bricks
 
 /**
  * 混乱的世界，用于存取信息，信息只能以byte_t的形式存在。
- * 世界提供了两个存取模型：
- * 一是一维空间模型，按空间位置（position）存取，位置是连续的，不能超过空间大小（size）。
- * 二是碎片模型，碎片是一块连续的内存，以空间位置定位到碎片，然后直接存取内存。
+ *
+ * 提供了两种存取模型：
+ * 一是一维空间模型，按位置（position）存取，位置是连续的，不能超过空间大小（size）。
+ * 一是内存碎片模型，从位置定位到碎片，碎片是连续的内存块，直接存取内存。
+ *
+ * 使用了两种资源：
+ * 一是位置
+ * 一是内存
+ *
+ * expand和forget组合接口，为混乱的世界提供了一个类似栈的信息存取方式。
  */
 class Chaos
 {
@@ -30,30 +39,24 @@ public:
     /**
      * 空间的大小
      */
-    size_t size() = 0;
+    virtual size_t size() = 0;
 
     /**
      * 扩展空间的大小
-     * 何时何处划分碎片由实现定义，但是必须遵循以下约定，两次expand之间的空间必须是连
-     * 续的
+     * 何时何处划分碎片由实现定义，但是必须遵循以下约定，两次expand之间的区间在内存上
+     * 必须是连续的
      */
-    int expand(size_t size) = 0;
+    virtual int expand(size_t size) = 0;
 
     /**
-     * 移除空间[0, size)，移除后影响后续的位置，以及空间的大小
+     * 忘记区间[position, size)的内容
      */
-    int remove(size_t size) = 0;
-
-    /**
-     * 遗忘[0, size)之间的信息，遗忘之后无法再存取，但是不会改变空间的位置。仅仅为了
-     * 获取释放内存的时机。
-     */
-    int forget(size_t size) = 0;
+    virtual int forget(size_t position) = 0;
 
     /**
      * 根据空间位置定位到碎片
      */
-    Piece *locate(int position) = 0;
+    virtual Evil<Piece> locate(int position) = 0;
 
     /**
      * 存取position开始的连续空间
