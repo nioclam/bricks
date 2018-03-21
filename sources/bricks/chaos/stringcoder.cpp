@@ -4,16 +4,16 @@
  */
  #include <cstdio>
  #include <cstdarg>
- #include "cstrcoder.h"
+ #include "stringcoder.h"
 
 using namespace bricks;
 
-CStrCoder::CStrCoder(Chaos *chaos)
+StringCoder::StringCoder(Chaos *chaos)
     : Coder(chaos)
 {
 }
 
-int CStrCoder::code(const char *format, ...)
+int StringCoder::code(const char *format, ...)
 {
     size_t  length = 0;
     va_list vl;
@@ -33,7 +33,7 @@ int CStrCoder::code(const char *format, ...)
     return 0;
 }
 
-char *CStrCoder::cstr()
+char *StringCoder::string()
 {
     return (char *)source();
 }

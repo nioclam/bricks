@@ -9,13 +9,10 @@
  * 混沌的世界，唯有盘古能够开天辟地
  */
 
-#include <bricks/azrael/azrael.h>
+#include <bricks/azrael.h>
 #include "byte.h"
 #include "piece.h"
 #include "block.h"
-#include "chaosframe.h"
-#include "coder.h"
-#include "cstrcoder.h"
 
 namespace bricks
 {
@@ -31,7 +28,7 @@ namespace bricks
  * 一是位置
  * 一是内存
  *
- * expand和forget组合接口，为混乱的世界提供了一个类似栈的信息存取方式。
+ * expand和truncate组合接口，为混乱的世界提供了一个类似栈的信息存取方式。
  */
 class Chaos
 {
@@ -49,9 +46,15 @@ public:
     virtual int expand(size_t size) = 0;
 
     /**
-     * 忘记区间[position, size)的内容
+     * 忘记区间[0, position)的内容，后续位置以及内存没有变化
+     * 仅仅提供一个释放闲置资源的时机
      */
     virtual int forget(size_t position) = 0;
+
+    /**
+     * 从位置position截断，丢弃区间[position, size)
+     */
+    virtual int truncate(size_t position) = 0;
 
     /**
      * 根据空间位置定位到碎片

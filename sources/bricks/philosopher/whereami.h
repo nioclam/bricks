@@ -5,15 +5,15 @@
 #ifndef __BRICKS_PHILOSOPHER_WHEREAMI_H__
 #define __BRICKS_PHILOSOPHER_WHEREAMI_H__ 1
 
-#include <bricks/byte/byte.h>
+#include <bricks/chaos.h>
 
 namespace bricks
 {
 
-char *whereami(const char *file, size_t line, Chaos *chaos = this_player->stringPool);
+char *whereami(const char *file, size_t line, Chaos *chaos);
 
 }
 
-#define WHEREAMI whereami(__FILE__, __LINE__)
+#define WHEREAMI(chaos) whereami(__FILE__, __LINE__, chaos)
 
 #endif /* #ifndef __BRICKS_PHILOSOPHER_WHEREAMI_H__ */

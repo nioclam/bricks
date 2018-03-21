@@ -5,7 +5,7 @@
 #ifndef __BRICKS_PHILOSOPHER_PHILOSOPHER_H__
 #define __BRICKS_PHILOSOPHER_PHILOSOPHER_H__ 1
 
-#include <bricks/chaos/chaos.h>
+#include <bricks/chaos.h>
 
 namespace bricks
 {
@@ -16,16 +16,13 @@ namespace bricks
  */
 class Philosopher
 {
+public:
     /**
      * Philosopher is who know 'who am I?'.
      */
-    virtual char *whoami(Chaos *chaos = this_player->stringPool) = 0;
+    virtual char *whoami(Chaos *chaos) = 0;
 };
 
 }
-
-#include "named.h"
-#include "whoami.h"
-#include "whereami.h"
 
 #endif /* #ifndef __BRICKS_PHILOSOPHER_PHILOSOPHER_H__ */

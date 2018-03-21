@@ -6,6 +6,8 @@
 #define __BRICKS_AZRAEL_AZRAEL_H__ 1
 
 #include <memory>
+#include "azraelwings.h"
+#include "azraeldebugger.h"
 
 /**
  * 只要灵魂存在，死亡就一直如影随影，直到解脱

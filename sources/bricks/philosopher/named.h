@@ -19,9 +19,9 @@ public:
 
 public:
     /**
-     * Philosopher is who know 'who am I?'.
+     * @param chaos 参数退化，不需要这个参数了
      */
-    virtual char *whoami(Chaos *chaos = this_player->stringPool);
+    virtual char *whoami(Chaos *chaos = nullptr);
 
 protected:
     const char *m_name;

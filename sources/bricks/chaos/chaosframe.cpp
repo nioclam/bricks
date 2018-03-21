@@ -13,5 +13,5 @@ ChaosFrame::ChaosFrame(Chaos *chaos)
 
 ChaosFrame::~ChaosFrame()
 {
-    m_chaos->forget(m_position);
+    m_chaos->truncate(m_position);
 }

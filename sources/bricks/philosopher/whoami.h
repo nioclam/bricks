@@ -6,7 +6,7 @@
 #define __BRICKS_PHILOSOPHER_WHOAMI_H__ 1
 
 #include <typeinfo>
-#include <bricks/chaos/chaos.h>
+#include "philosopher.h"
 
 namespace bricks
 {
@@ -17,39 +17,39 @@ namespace bricks
  * @return 返回utf8编码的string
  */
 template <typename DataType>
-char *whoami(DataType unknown, Chaos *chaos = this_player->stringPool)
+char *whoami(DataType unknown, Chaos *chaos)
 {
-    CStrCoder coder(chaos);
+    StringCoder coder(chaos);
 
     if (-1 == coder.code("#%s", typeid(DataType).name()))
     {
         return "[WhoAmI?]";
     }
 
-    return coder.cstr();
+    return coder.string();
 }
 
 template <typename DataType>
-char *whoami<DataType *>(DataType *pointer, Chaos *chaos = this_player->stringPool)
+char *whoami<DataType *>(DataType *pointer, Chaos *chaos)
 {
-    CStrCoder coder(chaos);
+    StringCoder coder(chaos);
 
     if (-1 == coder.code("#%s@%p", typeid(DataType *).name(), pointer))
     {
         return "[WhoAmI?]";
     }
 
-    return coder.cstr();
+    return coder.string();
 }
 
 template <>
-char *whoami<Philosopher>(Philosopher &philosopher, Chaos *chaos = this_player->stringPool)
+char *whoami<Philosopher>(Philosopher &philosopher, Chaos *chaos)
 {
     return philosopher.whoami(chaos);
 }
 
 template <>
-char *whoami<Philosopher>(Philosopher *philosopher, Chaos *chaos = this_player->stringPool)
+char *whoami<Philosopher>(Philosopher *philosopher, Chaos *chaos)
 {
     return philosopher->whoami(chaos);
 }
