@@ -27,4 +27,3 @@ public:
 }
 
 #endif /* #ifndef __BRICKS_MISC_INDESCRIBABLE_H__ */
-

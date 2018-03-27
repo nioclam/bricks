@@ -22,4 +22,3 @@ bool Keyword::operator != (Hint *hint)
 {
 	return !operator == (hint);
 }
-

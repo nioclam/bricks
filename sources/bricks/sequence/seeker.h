@@ -29,4 +29,3 @@ public:
 }
 
 #endif /* #ifndef __BRICKS_SEQUENCE_SEEKER_H__ */
-

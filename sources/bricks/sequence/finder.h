@@ -28,4 +28,3 @@ public:
 }
 
 #endif /* #ifndef __BRICKS_SEQUENCE_FINDER_H__ */
-

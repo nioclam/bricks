@@ -58,4 +58,3 @@ protected:
 }
 
 #endif /* #ifndef __BRICKS_SEQUENCE_KEYWORD_H__ */
-

@@ -14,4 +14,3 @@ bool Element::isSingular()
 {
 	return false;
 }
-

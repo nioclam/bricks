@@ -34,4 +34,3 @@ public:
 }
 
 #endif /* #ifndef __BRICKS_SEQUENCE_VISITOR_H__ */
-

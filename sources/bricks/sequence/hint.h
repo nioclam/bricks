@@ -109,4 +109,3 @@ protected:
 }
 
 #endif /* #ifndef __BRICKS_SEQUENCE_HINT_H__ */
-

@@ -38,4 +38,3 @@ public:
 } // namespace bricks_objectpool
 
 #endif /* #ifndef __BRICKS_OBJECT_OBJECTHOST_H__ */
-

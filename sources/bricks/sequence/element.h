@@ -33,4 +33,3 @@ public:
 }
 
 #endif /* #ifndef __BRICKS_SEQUENCE_ELEMENT_H__ */
-

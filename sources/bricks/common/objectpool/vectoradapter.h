@@ -35,4 +35,3 @@ public: // 继承自Composite
 } // namespace bricks
 
 #endif /* #ifndef __BRICKS_OBJECT_VECTORADAPTER_H__ */
-

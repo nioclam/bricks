@@ -21,4 +21,3 @@
 #include "common/objectpool.h"
 
 #endif /* #ifndef __BRICKS_COMMON_H__ */
-

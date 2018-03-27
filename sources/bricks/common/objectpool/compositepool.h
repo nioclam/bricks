@@ -98,4 +98,3 @@ protected:
 } // namespace bricks
 
 #endif /* #ifndef __BRICKS_OBJECT_COMPOSITEPOOL_H__ */
-

@@ -84,4 +84,3 @@ bool Hint::expired()
 {
 	m_revision != m_sequence->revision();
 }
-

@@ -30,4 +30,3 @@ public:
 }
 
 #endif /* #ifndef __BRICKS_SEQUENCE_TRAVERSER_H__ */
-

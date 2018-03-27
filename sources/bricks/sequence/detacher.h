@@ -29,4 +29,3 @@ public:
 }
 
 #endif /* #ifndef __BRICKS_SEQUENCE_DETACHER_H__ */
-

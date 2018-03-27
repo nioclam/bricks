@@ -24,4 +24,3 @@ Frozen<Cursor> CursorFactory::make(Element *prev, Element *next, Sequence *seque
 
 	return cursor.freeze();
 }
-

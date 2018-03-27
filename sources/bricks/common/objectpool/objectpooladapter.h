@@ -35,4 +35,3 @@ protected:
 }
 
 #endif /* #ifndef __BRICKS_OBJECT_OBJECTPOOLADAPTER_H__ */
-

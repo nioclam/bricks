@@ -128,4 +128,3 @@ void Cursor::moveFinal()
 	m_nextHint->stop();
 	m_prevHint->movePrev();
 }
-

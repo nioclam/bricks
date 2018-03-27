@@ -25,4 +25,3 @@ Element *Singularity::getSingularity()
 {
 	return this;
 }
-

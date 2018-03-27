@@ -8,4 +8,3 @@
 #include "objectpool/objectpool.h"
 
 #endif /* #ifndef __BRICKS_OBJECTPOOL_H__ */
-

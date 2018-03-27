@@ -89,4 +89,3 @@ public:
 } // namespace bricks_objectpool
 
 #endif /* #ifndef __BRICKS_OBJECT_OBJECTPOOLSIZE_H__ */
-

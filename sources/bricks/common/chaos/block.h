@@ -21,7 +21,7 @@ public:
         , length(0)
     {
     }
-    
+
     Block(byte_t *d, size_t l)
         : data(d)
         , length(l)

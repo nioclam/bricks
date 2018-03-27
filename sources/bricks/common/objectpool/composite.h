@@ -41,4 +41,3 @@ public:
 } // namespace bricks
 
 #endif /* #ifndef __BRICKS_OBJECT_COMPOSITE_H__ */
-

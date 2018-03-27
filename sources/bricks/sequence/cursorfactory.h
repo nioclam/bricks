@@ -42,4 +42,3 @@ public:
 }
 
 #endif /* #ifndef __BRICKS_SEQUENCE_CURSORFACTORY_H__ */
-

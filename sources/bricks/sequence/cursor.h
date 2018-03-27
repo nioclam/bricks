@@ -116,4 +116,3 @@ protected:
 }
 
 #endif /* #ifndef __BRICKS_SEQUENCE_CURSOR_H__ */
-

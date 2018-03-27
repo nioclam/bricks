@@ -16,4 +16,3 @@ Frozen<Hint> HintFactory::make(Sequence *sequence)
 {
 	return make(sequence->singularity(), sequence);
 }
-

@@ -41,4 +41,3 @@ public:
 }
 
 #endif /* #ifndef __BRICKS_SEQUENCE_HINTFACTORY_H__ */
-

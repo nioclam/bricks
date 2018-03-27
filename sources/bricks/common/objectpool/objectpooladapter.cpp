@@ -72,4 +72,3 @@ ObjectPool *ObjectPoolAdapter::adapt(int size)
 
 	return NULL;
 }
-

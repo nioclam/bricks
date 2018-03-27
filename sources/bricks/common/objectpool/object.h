@@ -15,4 +15,3 @@
 #include "vectoradapter.h"
 
 #endif /* #ifndef __BRICKS_OBJECT_OBJECT_H__ */
-
