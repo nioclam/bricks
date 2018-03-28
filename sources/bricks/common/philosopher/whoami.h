@@ -6,6 +6,7 @@
 #define __BRICKS_PHILOSOPHER_WHOAMI_H__ 1
 
 #include <typeinfo>
+#include "../player/player.h"
 #include "philosopher.h"
 
 namespace bricks
@@ -17,7 +18,7 @@ namespace bricks
  * @return 返回utf8编码的string
  */
 template <typename DataType>
-inline const char *whoami(DataType unknown, Chaos *chaos)
+inline const char *whoami(DataType unknown, Chaos *chaos = bricks::this_player->stringPool)
 {
     StringCoder coder(chaos);
 
@@ -30,7 +31,7 @@ inline const char *whoami(DataType unknown, Chaos *chaos)
 }
 
 template <typename DataType>
-inline const char *whoami(DataType *pointer, Chaos *chaos)
+inline const char *whoami(DataType *pointer, Chaos *chaos = bricks::this_player->stringPool)
 {
     StringCoder coder(chaos);
 

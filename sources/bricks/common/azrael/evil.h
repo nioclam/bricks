@@ -14,7 +14,8 @@ namespace bricks
 template<typename Soul, typename DefaultFreer> class AzraelWings;
 
 /**
- * 恶魔 - 禁锢堕落的灵魂
+ * 恶魔
+ * 禁锢堕落的灵魂
  *
  *
  * 用于在函数间传递灵魂，例如：

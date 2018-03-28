@@ -5,7 +5,7 @@
 #ifndef __BRICKS_JOURNAL_LOGFORMATTER_H__
 #define __BRICKS_JOURNAL_LOGFORMATTER_H__ 1
 
-#include "../player.h"
+#include "../philosopherandplayer.h"
 
 namespace bricks
 {

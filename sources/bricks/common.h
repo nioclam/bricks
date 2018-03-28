@@ -15,8 +15,7 @@
 #include "common/azrael.h"
 #include "common/chaos.h"
 #include "common/indescribable.h"
-#include "common/philosopher.h"
-#include "common/player.h"
+#include "common/philosopherandplayer.h"
 #include "common/journal.h"
 #include "common/objectpool.h"
 

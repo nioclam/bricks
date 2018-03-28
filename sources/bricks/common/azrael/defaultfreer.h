@@ -8,6 +8,9 @@
 namespace bricks
 {
 
+/**
+ * Azreal和Evil的模板参数
+ */
 class DefaultFreer
 {
 };
@@ -15,4 +18,3 @@ class DefaultFreer
 }
 
 #endif /* #ifndef __BRICKS_AZRAEL_DEFAULTFREER_H__ */
-

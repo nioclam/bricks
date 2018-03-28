@@ -11,8 +11,7 @@
 
 #include <thread>
 #include <functional>
-#include "../chaos.h"
-#include "../philosopher.h"
+#include "../philosopher/philosopher.h"
 
 namespace bricks
 {

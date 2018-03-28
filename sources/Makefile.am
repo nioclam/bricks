@@ -3,16 +3,15 @@ AM_CXXFLAGS=-Wall -g -std=c++11
 
 lib_LTLIBRARIES  = libbricks.la
 libbricks_la_SOURCES = \
-                       bricks/common.h \
-                       bricks/misc.h \
+             bricks/common.h \
+             bricks/misc.h \
 					   bricks/common/singleton.h \
-                       bricks/common/azrael.h \
-                       bricks/common/chaos.h \
-                       bricks/common/indescribable.h \
-                       bricks/common/philosopher.h \
-                       bricks/common/player.h \
-                       bricks/common/journal.h \
-                       bricks/common/objectpool.h \
+             bricks/common/azrael.h \
+             bricks/common/chaos.h \
+             bricks/common/indescribable.h \
+             bricks/common/philosopherandplayer.h \
+             bricks/common/journal.h \
+             bricks/common/objectpool.h \
 					   bricks/common/azrael/defaultfreer.h \
 					   bricks/common/azrael/azrael.h \
 					   bricks/common/azrael/azraelwings.h \

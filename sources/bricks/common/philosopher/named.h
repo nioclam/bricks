@@ -10,8 +10,6 @@
 namespace bricks
 {
 
-/**
- */
 class Named : public Philosopher
 {
 public:

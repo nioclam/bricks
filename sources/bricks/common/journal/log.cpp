@@ -3,7 +3,7 @@
  * Copyright (C) 2014, Coin Lam.
  */
 #include <cstdio>
-#include "../player.h"
+#include "../philosopherandplayer.h"
 #include "log.h"
 #include "journal.h"
 
