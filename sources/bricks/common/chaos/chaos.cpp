@@ -2,7 +2,7 @@
  * MIT License
  * Copyright (C) 2018, Coin Lam.
  */
-#include "../journal.h"
+#include <stdio.h>
 #include "chaos.h"
 
 using namespace bricks;
@@ -13,6 +13,7 @@ Block Chaos::access(int position)
 
     if (-1 == piece.redeem(locate(position)))
     {
+        fprintf(stderr, "Chaos#size(%d)::access(%d)", size(), position);
         return Block(nullptr, 0);
     }
 

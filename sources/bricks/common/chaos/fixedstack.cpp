@@ -1,4 +1,4 @@
-#include "../journal.h"
+#include <stdio.h>
 #include "fixedstack.h"
 #include "fixedpiece.h"
 
@@ -25,7 +25,7 @@ int FixedStack::expand(size_t size)
 {
     if (m_size + size > m_capacity)
     {
-        Error("@FixedStack", "...");
+        fprintf(stderr, "FixedStack#size(%d)::expand(%d)", m_size, size);
         return -1;
     }
 
@@ -42,7 +42,7 @@ int FixedStack::truncate(size_t position)
 {
     if (position > m_size)
     {
-        Error("@FixedStack");
+        fprintf(stderr, "FixedStack#size(%d)::truncate(%d)", m_size, position);
         return -1;
     }
 
