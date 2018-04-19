@@ -6,7 +6,7 @@
 #define __BRICKS_OBJECT_COMPOSITEPOOLADAPTER_H__ 1
 
 #include <new>
-#include <bricks/misc/misc.h>
+#include <bricks/common/common.h>
 #include "compositepool.h"
 
 namespace bricks

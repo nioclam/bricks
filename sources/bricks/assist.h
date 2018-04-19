@@ -11,12 +11,12 @@
 #include <cstdlib>
 #include <algorithm>
 
-#include "common/singleton.h"
-#include "common/azrael.h"
-#include "common/chaos.h"
-#include "common/indescribable.h"
-#include "common/philosopherandplayer.h"
-#include "common/journal.h"
-#include "common/objectpool.h"
+#include "assist/singleton.h"
+#include "assist/azrael.h"
+#include "assist/chaos.h"
+#include "assist/indescribable.h"
+#include "assist/philosopherandplayer.h"
+#include "assist/journal.h"
+#include "assist/objectpool.h"
 
 #endif /* #ifndef __BRICKS_ASSIST_H__ */

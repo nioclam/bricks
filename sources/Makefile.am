@@ -3,10 +3,10 @@ AM_CXXFLAGS=-Wall -g -std=c++11
 
 lib_LTLIBRARIES  = libbricks.la
 libbricks_la_SOURCES = \
+    bricks/common.h \
+    bricks/assist.h \
 	bricks/common/failable.h \
 	bricks/common/failable.cpp \
-    bricks/assist.h \
-    bricks/misc.h \
     bricks/assist/singleton.h \
     bricks/assist/azrael.h \
     bricks/assist/chaos.h \
@@ -60,4 +60,4 @@ libbricks_la_SOURCES = \
 	bricks/assist/journal/logformatter.h \
 	bricks/assist/journal/toolkit.h \
 	bricks/assist/objectpool/objectpool.h \
-	bricks/misc/coin.h
+	bricks/coin.h
