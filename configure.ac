@@ -3,7 +3,7 @@
 
 AC_PREREQ([2.69])
 AC_INIT([bricks], [1.1.1-alpha])
-AC_CONFIG_SRCDIR([sources/bricks/misc/coin.h])
+AC_CONFIG_SRCDIR([sources/bricks/coin.h])
 AC_CONFIG_HEADERS([sources/bricks/config.h])
 AM_INIT_AUTOMAKE
 LT_INIT
@@ -31,4 +31,3 @@ AC_FUNC_REALLOC
 
 AC_OUTPUT([Makefile
 		   sources/Makefile])
-

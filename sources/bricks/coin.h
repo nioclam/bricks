@@ -2,8 +2,8 @@
  * MIT License
  * Copyright (C) 2015, Coin Lam.
  */
-#ifndef __BRICKS_MISC_COIN_H__
-#define __BRICKS_MISC_COIN_H__ 1
+#ifndef __BRICKS_COIN_H__
+#define __BRICKS_COIN_H__ 1
 
 namespace bricks
 {
@@ -35,4 +35,4 @@ public:
 
 }
 
-#endif /* #ifndef __BRICKS_MISC_COIN_H__ */
+#endif /* #ifndef __BRICKS_COIN_H__ */

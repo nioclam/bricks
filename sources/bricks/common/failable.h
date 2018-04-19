@@ -2,8 +2,8 @@
  * MIT License
  * Copyright (C) 2014, Coin Lam.
  */
-#ifndef __BRICKS_MISC_FAILABLE_H__
-#define __BRICKS_MISC_FAILABLE_H__ 1
+#ifndef __BRICKS_COMMON_FAILABLE_H__
+#define __BRICKS_COMMON_FAILABLE_H__ 1
 
 namespace bricks
 {
@@ -47,4 +47,4 @@ protected:
 
 }
 
-#endif /* #ifndef __BRICKS_MISC_FAILABLE_H__ */
+#endif /* #ifndef __BRICKS_COMMON_FAILABLE_H__ */
