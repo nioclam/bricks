@@ -2,8 +2,8 @@
  * MIT License
  * Copyright (C) 2018, Coin Lam.
  */
- #ifndef __BRICKS_COMMON_H__
- #define __BRICKS_COMMON_H__
+ #ifndef __BRICKS_ASSIST_H__
+ #define __BRICKS_ASSIST_H__
 
 #include <cassert>
 #include <climits>
@@ -19,4 +19,4 @@
 #include "common/journal.h"
 #include "common/objectpool.h"
 
-#endif /* #ifndef __BRICKS_COMMON_H__ */
+#endif /* #ifndef __BRICKS_ASSIST_H__ */

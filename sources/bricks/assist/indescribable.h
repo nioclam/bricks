@@ -2,8 +2,8 @@
  * MIT License
  * Copyright (C) 2018, Coin Lam.
  */
-#ifndef __BRICKS_COMMON_INDESCRIBABLE_H__
-#define __BRICKS_COMMON_INDESCRIBABLE_H__ 1
+#ifndef __BRICKS_ASSIST_INDESCRIBABLE_H__
+#define __BRICKS_ASSIST_INDESCRIBABLE_H__ 1
 
 /**
  * 道可道非常道名可名非常名
@@ -26,4 +26,4 @@ public:
 
 }
 
-#endif /* #ifndef __BRICKS_COMMON_INDESCRIBABLE_H__ */
+#endif /* #ifndef __BRICKS_ASSIST_INDESCRIBABLE_H__ */

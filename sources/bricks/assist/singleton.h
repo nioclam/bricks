@@ -2,8 +2,8 @@
  * MIT License
  * Copyright (C) 2014, Coin Lam.
  */
-#ifndef __BRICKS_COMMON_SINGLETON_H__
-#define __BRICKS_COMMON_SINGLETON_H__ 1
+#ifndef __BRICKS_ASSIST_SINGLETON_H__
+#define __BRICKS_ASSIST_SINGLETON_H__ 1
 
 namespace bricks
 {
@@ -21,4 +21,4 @@ StatelessObject *singleton()
 
 }
 
-#endif /* #ifndef __BRICKS_COMMON_SINGLETON_H__ */
+#endif /* #ifndef __BRICKS_ASSIST_SINGLETON_H__ */
