@@ -18,7 +18,7 @@ template <class CompositeObject>
 class CompositePool : public ObjectPool
 {
 public:
-	static const int PoolLimit = 128;
+	static int PoolLimit = 128;
 
 public:
 	CompositePool()
