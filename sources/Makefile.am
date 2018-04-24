@@ -4,9 +4,17 @@ AM_CXXFLAGS=-Wall -g -std=c++11
 lib_LTLIBRARIES  = libbricks.la
 libbricks_la_SOURCES = \
     bricks/common.h \
-    bricks/assist.h \
 	bricks/common/failable.h \
 	bricks/common/failable.cpp \
+    bricks/common/list.h \
+    bricks/common/list/node.h \
+    bricks/common/list/node.cpp \
+    bricks/common/list/list.h \
+    bricks/common/list/stacklist.h \
+    bricks/common/list/stacklist.cpp \
+    bricks/common/list/queuelist.h \
+    bricks/common/list/queuelist.cpp \
+    bricks/assist.h \
     bricks/assist/singleton.h \
     bricks/assist/azrael.h \
     bricks/assist/chaos.h \
