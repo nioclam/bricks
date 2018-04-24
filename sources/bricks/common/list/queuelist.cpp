@@ -12,6 +12,12 @@ QueueList::QueueList()
 {
 }
 
+QueueList::QueueList(Node *head, Node *tail)
+    : m_singularity(head)
+    , m_tail(tail)
+{
+}
+
 void QueueList::push(Node *node)
 {
     m_tail->link(node);

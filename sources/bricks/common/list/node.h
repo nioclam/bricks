@@ -12,6 +12,7 @@ class Node
 {
 public:
     Node();
+    Node(Node *next);
 
 public:
     void link(Node *next);

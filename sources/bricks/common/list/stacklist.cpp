@@ -11,6 +11,11 @@ StackList::StackList()
 {
 }
 
+StackList::StackList(Node *head)
+    : m_singularity(head)
+{
+}
+
 void StackList::push(Node *node)
 {
     m_singularity.link(node);

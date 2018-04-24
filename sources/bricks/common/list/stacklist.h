@@ -14,6 +14,7 @@ class StackList : public List
 {
 public:
     StackList();
+    StackList(Node *head);
 
 public:
     virtual void push(Node *node);

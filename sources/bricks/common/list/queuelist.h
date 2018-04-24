@@ -14,6 +14,7 @@ class QueueList : public List
 {
 public:
     QueueList();
+    QueueList(Node *head, Node *tail);
 
 public:
     virtual void push(Node *node);

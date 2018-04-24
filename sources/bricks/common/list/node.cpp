@@ -11,6 +11,11 @@ Node::Node()
 {
 }
 
+Node::Node(Node *next)
+    : m_next(next)
+{
+}
+
 void Node::link(Node *next)
 {
     next->m_next = m_next;
