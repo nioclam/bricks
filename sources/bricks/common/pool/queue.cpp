@@ -2,31 +2,31 @@
  * MIT License
  * Copyright (C) 2018, Coin Lam.
  */
-#include "queuelist.h"
+#include "queue.h"
 
 using namespace bricks;
 
-QueueList::QueueList()
+Queue::Queue()
     : m_singularity()
     , m_tail(&m_singularity)
 {
 }
 
-QueueList::QueueList(Node *head, Node *tail)
+Queue::Queue(Node *head, Node *tail)
     : m_singularity(head)
     , m_tail(tail)
 {
 }
 
-void QueueList::push(Node *node)
+void Queue::hire(Node *node)
 {
-    m_tail->link(node);
+    m_tail->hire(node);
     m_tail = node;
 }
 
-Node *QueueList::pop()
+Node *Queue::fire()
 {
-    auto node = m_singularity.drop();
+    auto node = m_singularity.fire();
 
     if (m_tail == node) {
         m_tail = &m_singularity;

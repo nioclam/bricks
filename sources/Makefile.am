@@ -6,14 +6,14 @@ libbricks_la_SOURCES = \
     bricks/common.h \
 	bricks/common/failable.h \
 	bricks/common/failable.cpp \
-    bricks/common/list.h \
-    bricks/common/list/node.h \
-    bricks/common/list/node.cpp \
-    bricks/common/list/list.h \
-    bricks/common/list/stacklist.h \
-    bricks/common/list/stacklist.cpp \
-    bricks/common/list/queuelist.h \
-    bricks/common/list/queuelist.cpp \
+    bricks/common/pool.h \
+    bricks/common/pool/node.h \
+    bricks/common/pool/node.cpp \
+    bricks/common/pool/pool.h \
+    bricks/common/pool/stack.h \
+    bricks/common/pool/stack.cpp \
+    bricks/common/pool/queue.h \
+    bricks/common/pool/queue.cpp \
     bricks/assist.h \
     bricks/assist/singleton.h \
     bricks/assist/azrael.h \

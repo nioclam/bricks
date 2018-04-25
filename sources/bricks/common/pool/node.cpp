@@ -16,13 +16,13 @@ Node::Node(Node *next)
 {
 }
 
-void Node::link(Node *next)
+void Node::hire(Node *next)
 {
     next->m_next = m_next;
     this->m_next = next;
 }
 
-Node *Node::drop()
+Node *Node::fire()
 {
     Node *next = m_next;
 
