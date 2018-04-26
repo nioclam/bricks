@@ -7,6 +7,10 @@ libbricks_la_SOURCES = \
     bricks/common/singleton.h \
 	bricks/common/failable.h \
 	bricks/common/failable.cpp \
+    bricks/common/list.h \
+    bricks/common/list/list.h \
+    bricks/common/list/node.h \
+    bricks/common/list/node.cpp \
     bricks/common/pool.h \
     bricks/common/pool/resource.h \
     bricks/common/pool/resource.cpp \
