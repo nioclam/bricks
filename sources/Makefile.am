@@ -14,6 +14,8 @@ libbricks_la_SOURCES = \
     bricks/common/pool/stack.cpp \
     bricks/common/pool/queue.h \
     bricks/common/pool/queue.cpp \
+    bricks/common/pool/lockfreestack.h \
+    bricks/common/pool/lockfreestack.cpp \
     bricks/assist.h \
     bricks/assist/singleton.h \
     bricks/assist/azrael.h \

@@ -18,7 +18,7 @@ public:
     void hire(Node *next);
     Node *fire();
 
-protected:
+public:
     Node *m_next;
 };
 
