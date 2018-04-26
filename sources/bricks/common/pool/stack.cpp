@@ -18,10 +18,10 @@ Stack::Stack(Node *head)
 
 void Stack::hire(Node *node)
 {
-    m_singularity.hire(node);
+    m_singularity.link(node);
 }
 
 Node *Stack::fire()
 {
-    return m_singularity.fire();
+    return m_singularity.drop();
 }

@@ -15,8 +15,8 @@ public:
     Node(Node *next);
 
 public:
-    void hire(Node *next);
-    Node *fire();
+    void link(Node *next);
+    Node *drop();
 
 public:
     Node *m_next;

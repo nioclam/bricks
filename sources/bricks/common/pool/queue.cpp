@@ -20,13 +20,13 @@ Queue::Queue(Node *head, Node *tail)
 
 void Queue::hire(Node *node)
 {
-    m_tail->hire(node);
+    m_tail->link(node);
     m_tail = node;
 }
 
 Node *Queue::fire()
 {
-    auto node = m_singularity.fire();
+    auto node = m_singularity.drop();
 
     if (m_tail == node) {
         m_tail = &m_singularity;
