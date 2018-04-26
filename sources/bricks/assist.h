@@ -11,7 +11,6 @@
 #include <cstdlib>
 #include <algorithm>
 
-#include "assist/singleton.h"
 #include "assist/azrael.h"
 #include "assist/chaos.h"
 #include "assist/indescribable.h"

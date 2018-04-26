@@ -12,6 +12,7 @@
 #include <algorithm>
 
 #include "coin.h"
+#include "common/singleton.h"
 #include "common/failable.h"
 
 #endif /* #ifndef __BRICKS_COMMON_H__ */

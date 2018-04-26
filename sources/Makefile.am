@@ -4,6 +4,7 @@ AM_CXXFLAGS=-Wall -g -std=c++11
 lib_LTLIBRARIES  = libbricks.la
 libbricks_la_SOURCES = \
     bricks/common.h \
+    bricks/common/singleton.h \
 	bricks/common/failable.h \
 	bricks/common/failable.cpp \
     bricks/common/pool.h \
@@ -17,7 +18,6 @@ libbricks_la_SOURCES = \
     bricks/common/pool/lockfreestack.h \
     bricks/common/pool/lockfreestack.cpp \
     bricks/assist.h \
-    bricks/assist/singleton.h \
     bricks/assist/azrael.h \
     bricks/assist/chaos.h \
     bricks/assist/indescribable.h \
