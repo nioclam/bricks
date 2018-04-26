@@ -11,12 +11,12 @@
 
 #include <thread>
 #include <functional>
+#include <bricks/common.h>
 #include "../philosopher/philosopher.h"
 
 namespace bricks
 {
 
-class ObjectPool;
 class Journal;
 
 class Player : public std::thread

@@ -6,7 +6,6 @@
 #include <cstring>
 #include "../chaos.h"
 #include "../journal.h"
-#include "../objectpool.h"
 #include "player.h"
 
 using namespace bricks;

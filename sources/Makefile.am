@@ -17,13 +17,13 @@ libbricks_la_SOURCES = \
     bricks/common/pool/queue.cpp \
     bricks/common/pool/lockfreestack.h \
     bricks/common/pool/lockfreestack.cpp \
+    bricks/common/objectpool.h \
     bricks/assist.h \
     bricks/assist/azrael.h \
     bricks/assist/chaos.h \
     bricks/assist/indescribable.h \
     bricks/assist/philosopherandplayer.h \
     bricks/assist/journal.h \
-    bricks/assist/objectpool.h \
     bricks/assist/azrael/defaultfreer.h \
     bricks/assist/azrael/azrael.h \
     bricks/assist/azrael/azraelwings.h \
