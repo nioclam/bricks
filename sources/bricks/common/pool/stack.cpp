@@ -11,17 +11,17 @@ Stack::Stack()
 {
 }
 
-Stack::Stack(Node *head)
+Stack::Stack(Resource *head)
     : m_singularity(head)
 {
 }
 
-void Stack::hire(Node *node)
+void Stack::hire(Resource *resource)
 {
-    m_singularity.link(node);
+    m_singularity.link(resource);
 }
 
-Node *Stack::fire()
+Resource *Stack::fire()
 {
     return m_singularity.drop();
 }

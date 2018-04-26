@@ -2,29 +2,29 @@
  * MIT License
  * Copyright (C) 2018, Coin Lam.
  */
-#include "node.h"
+#include "resource.h"
 
 using namespace bricks;
 
-Node::Node()
+Resource::Resource()
     : m_next(nullptr)
 {
 }
 
-Node::Node(Node *next)
+Resource::Resource(Resource *next)
     : m_next(next)
 {
 }
 
-void Node::link(Node *next)
+void Resource::link(Resource *next)
 {
     next->m_next = m_next;
     this->m_next = next;
 }
 
-Node *Node::drop()
+Resource *Resource::drop()
 {
-    Node *next = m_next;
+    Resource *next = m_next;
 
     if (m_next)
     {

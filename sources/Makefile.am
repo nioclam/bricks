@@ -8,8 +8,8 @@ libbricks_la_SOURCES = \
 	bricks/common/failable.h \
 	bricks/common/failable.cpp \
     bricks/common/pool.h \
-    bricks/common/pool/node.h \
-    bricks/common/pool/node.cpp \
+    bricks/common/pool/resource.h \
+    bricks/common/pool/resource.cpp \
     bricks/common/pool/pool.h \
     bricks/common/pool/stack.h \
     bricks/common/pool/stack.cpp \

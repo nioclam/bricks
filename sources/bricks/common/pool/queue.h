@@ -5,25 +5,25 @@
 #ifndef __BRICKS_POOL_QUEUE_H__
 #define __BRICKS_POOL_QUEUE_H__ 1
 
-#include "node.h"
+#include "resource.h"
 #include "pool.h"
 
 namespace bricks
 {
 
-class Queue : public Pool<Node>
+class Queue : public Pool<Resource>
 {
 public:
     Queue();
-    Queue(Node *head, Node *tail);
+    Queue(Resource *head, Resource *tail);
 
 public:
-    virtual void hire(Node *node);
-    virtual Node *fire();
+    virtual void hire(Resource *resource);
+    virtual Resource *fire();
 
 protected:
-    Node  m_singularity;
-    Node *m_tail;
+    Resource  m_singularity;
+    Resource *m_tail;
 };
 
 }

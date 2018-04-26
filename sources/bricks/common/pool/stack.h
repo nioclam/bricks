@@ -5,24 +5,24 @@
 #ifndef __BRICKS_POOL_STACK_H__
 #define __BRICKS_POOL_STACK_H__ 1
 
-#include "node.h"
+#include "resource.h"
 #include "pool.h"
 
 namespace bricks
 {
 
-class Stack : public Pool<Node>
+class Stack : public Pool<Resource>
 {
 public:
     Stack();
-    Stack(Node *head);
+    Stack(Resource *head);
 
 public:
-    virtual void hire(Node *node);
-    virtual Node *fire();
+    virtual void hire(Resource *resource);
+    virtual Resource *fire();
 
 protected:
-    Node m_singularity;
+    Resource m_singularity;
 };
 
 }

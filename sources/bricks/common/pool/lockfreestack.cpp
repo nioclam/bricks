@@ -11,19 +11,19 @@ LockFreeStack::LockFreeStack()
 {
 }
 
-LockFreeStack::LockFreeStack(Node *head)
+LockFreeStack::LockFreeStack(Resource *head)
     : m_singularity(head)
 {
 }
 
-void LockFreeStack::hire(Node *node)
+void LockFreeStack::hire(Resource *resource)
 {
-    node->m_next = m_singularity.load(std::memory_order_relaxed);
+    resource->m_next = m_singularity.load(std::memory_order_relaxed);
 
     while (
         !m_singularity.compare_exchange_weak(
-            node->m_next,
-            node,
+            resource->m_next,
+            resource,
             std::memory_order_release,
             std::memory_order_relaxed))
     {
@@ -31,20 +31,20 @@ void LockFreeStack::hire(Node *node)
     }
 }
 
-Node *LockFreeStack::fire()
+Resource *LockFreeStack::fire()
 {
-    auto node = m_singularity.load(std::memory_order_relaxed);
+    auto resource = m_singularity.load(std::memory_order_relaxed);
 
     while (
         !m_singularity.compare_exchange_weak(
-            node,
-            node->m_next,
+            resource,
+            resource->m_next,
             std::memory_order_release,
             std::memory_order_relaxed))
     {
         /* void loop */;
     }
 
-    node->m_next = nullptr;
-    return node;
+    resource->m_next = nullptr;
+    return resource;
 }
