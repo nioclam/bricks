@@ -16,6 +16,5 @@
 #include "assist/indescribable.h"
 #include "assist/philosopherandplayer.h"
 #include "assist/journal.h"
-#include "assist/objectpool.h"
 
 #endif /* #ifndef __BRICKS_ASSIST_H__ */
