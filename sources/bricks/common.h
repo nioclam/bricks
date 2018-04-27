@@ -15,6 +15,5 @@
 #include "common/singleton.h"
 #include "common/failable.h"
 #include "common/pool.h"
-#include "common/objectpool.h"
 
 #endif /* #ifndef __BRICKS_COMMON_H__ */

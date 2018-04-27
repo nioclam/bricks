@@ -11,7 +11,6 @@
 
 #include <thread>
 #include <functional>
-#include <bricks/common.h>
 #include "../philosopher/philosopher.h"
 
 namespace bricks
@@ -46,9 +45,8 @@ public:
      * 日志系统使用stringPool组装字符串，因此，stringPool的实现不能输出日志，
      * 否则有可能造成死循环
      */
-    Chaos      *stringPool;
-    ObjectPool *objectPool;
-    Journal    *journal;
+    Chaos   *stringPool;
+    Journal *journal;
 
 protected:
     char m_name[Player::NameSize];
