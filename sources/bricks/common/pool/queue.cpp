@@ -34,3 +34,8 @@ Resource *Queue::fire()
 
     return resource;
 }
+
+Resource *Queue::head()
+{
+    return m_singularity.m_next;
+}

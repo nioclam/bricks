@@ -21,6 +21,9 @@ public:
     virtual void hire(Resource *resource);
     virtual Resource *fire();
 
+public:
+    Resource *head();
+
 protected:
     Resource m_singularity;
 };

@@ -25,3 +25,8 @@ Resource *Stack::fire()
 {
     return m_singularity.drop();
 }
+
+Resource *Stack::head()
+{
+    return m_singularity.m_next;
+}
