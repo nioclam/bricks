@@ -21,7 +21,7 @@ public:
     virtual int expand(size_t size);
     virtual int forget(size_t position);
     virtual int truncate(size_t position);
-    virtual Evil<Piece> locate(int position);
+    virtual Evil<Piece> locate(size_t position);
 
 public:
     byte_t *stack();

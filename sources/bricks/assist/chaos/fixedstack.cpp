@@ -25,7 +25,7 @@ int FixedStack::expand(size_t size)
 {
     if (m_size + size > m_capacity)
     {
-        fprintf(stderr, "FixedStack#size(%d)::expand(%d)", m_size, size);
+        fprintf(stderr, "FixedStack#size(%zu)::expand(%zu)", m_size, size);
         return -1;
     }
 
@@ -42,7 +42,7 @@ int FixedStack::truncate(size_t position)
 {
     if (position > m_size)
     {
-        fprintf(stderr, "FixedStack#size(%d)::truncate(%d)", m_size, position);
+        fprintf(stderr, "FixedStack#size(%zu)::truncate(%zu)", m_size, position);
         return -1;
     }
 
@@ -50,7 +50,7 @@ int FixedStack::truncate(size_t position)
     return 0;
 }
 
-Evil<Piece> FixedStack::locate(int position)
+Evil<Piece> FixedStack::locate(size_t position)
 {
     return std::move(Evil<Piece>(new FixedPiece(this)));
 }

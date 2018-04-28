@@ -25,7 +25,7 @@ Player::Player(const char *familyName)
     , journal(nullptr)
 {
     bricks::this_player = this;
-    snprintf(m_name, sizeof(m_name), "%s#%d", familyName, get_id());
+    snprintf(m_name, sizeof(m_name), "%s#%p", familyName, this);
 }
 
 Player::Player(const char *familyName, Player *that)
@@ -34,7 +34,7 @@ Player::Player(const char *familyName, Player *that)
     , journal(that->journal)
 {
     bricks::this_player = this;
-    snprintf(m_name, sizeof(m_name), "%s#%d", familyName, get_id());
+    snprintf(m_name, sizeof(m_name), "%s#%p", familyName, this);
 }
 
 Player::Player(const char *familyName, std::function<void()> game)
@@ -56,7 +56,7 @@ void Player::play(std::function<void()> game)
 
     stringPool = &t_stringPool;
     journal    = nullptr;
-    snprintf(m_name, sizeof(m_name), "%s#%d", m_name, get_id());
+    snprintf(m_name, sizeof(m_name), "%s#%p", m_name, this);
 
     game();
 }

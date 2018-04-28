@@ -59,14 +59,14 @@ public:
     /**
      * 根据空间位置定位到碎片
      */
-    virtual Evil<Piece> locate(int position) = 0;
+    virtual Evil<Piece> locate(size_t position) = 0;
 
     /**
      * 存取position开始的连续空间
      *
      * @return 内存块。当Block.data() == nullptr，表示出错
      */
-    Block access(int position);
+    Block access(size_t osition);
 };
 
 }

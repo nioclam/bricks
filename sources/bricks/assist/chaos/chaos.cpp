@@ -7,13 +7,13 @@
 
 using namespace bricks;
 
-Block Chaos::access(int position)
+Block Chaos::access(size_t position)
 {
     Azrael<Piece> piece;
 
     if (-1 == piece.redeem(locate(position)))
     {
-        fprintf(stderr, "Chaos#size(%d)::access(%d)", size(), position);
+        fprintf(stderr, "Chaos#size(%zu)::access(%zu)", size(), position);
         return Block(nullptr, 0);
     }
 
