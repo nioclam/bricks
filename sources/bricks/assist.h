@@ -11,6 +11,7 @@
 #include <cstdlib>
 #include <algorithm>
 
+#include "assist/objectpool.h"
 #include "assist/azrael.h"
 #include "assist/chaos.h"
 #include "assist/indescribable.h"

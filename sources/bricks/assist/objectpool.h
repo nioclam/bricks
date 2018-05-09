@@ -6,5 +6,6 @@
 #define __BRICKS_ASSIST_OBJECTPOOL_H__ 1
 
 #include "objectpool/objectpool.h"
+#include "objectpool/objectpooladapter.h"
 
 #endif /* #ifndef __BRICKS_COMMON_ASSIST_OBJECTPOOL_H__ */

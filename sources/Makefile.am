@@ -1,5 +1,5 @@
 AUTOMAKE_OPTIONS = foreign subdir-objects
-AM_CXXFLAGS=-Wall -g -std=c++11
+AM_CXXFLAGS=-Wall -g -std=c++17
 
 lib_LTLIBRARIES  = libbricks.la
 libbricks_la_SOURCES = \
@@ -8,6 +8,15 @@ libbricks_la_SOURCES = \
     bricks/common/singleton.h \
 	bricks/common/failable.h \
 	bricks/common/failable.cpp \
+	bricks/common/secret.h \
+	bricks/common/secret/secret.h \
+	bricks/common/secret/secret.cpp \
+	bricks/common/secret/secretseed.h \
+	bricks/common/secret/secretseed.cpp \
+    bricks/common/align.h \
+    bricks/common/align/aligndata.h \
+    bricks/common/align/alignhead.h \
+    bricks/common/align/alignstub.h \
     bricks/common/list.h \
     bricks/common/list/list.h \
     bricks/common/list/node.h \
@@ -25,6 +34,14 @@ libbricks_la_SOURCES = \
     bricks/assist.h \
     bricks/assist/objectpool.h \
     bricks/assist/objectpool/objectpool.h \
+    bricks/assist/objectpool/objectunit.h \
+    bricks/assist/objectpool/objectreserved.h \
+    bricks/assist/objectpool/objectpage.h \
+    bricks/assist/objectpool/objecthost.h \
+    bricks/assist/objectpool/objectpoolrouter.h \
+    bricks/assist/objectpool/objectpoolrouter.cpp \
+    bricks/assist/objectpool/objectpooladapter.h \
+    bricks/assist/objectpool/objectpooladapter.cpp \
     bricks/assist/azrael.h \
     bricks/assist/chaos.h \
     bricks/assist/indescribable.h \

@@ -33,18 +33,38 @@ void LockFreeStack::hire(Resource *resource)
 
 Resource *LockFreeStack::fire()
 {
-    auto resource = m_singularity.load(std::memory_order_relaxed);
+    auto head = m_singularity.load(std::memory_order_relaxed);
 
     while (
+        nullptr != head &&
         !m_singularity.compare_exchange_weak(
-            resource,
-            resource->m_next,
+            head,
+            head->m_next,
             std::memory_order_release,
             std::memory_order_relaxed))
     {
         /* void loop */;
     }
 
-    resource->m_next = nullptr;
-    return resource;
+    if (nullptr != head)
+    {
+        head->m_next = nullptr;
+    }
+
+    return head;
+}
+
+void LockFreeStack::hire(Resource *head, Resource *tail)
+{
+    tail->m_next = m_singularity.load(std::memory_order_relaxed);
+
+    while (
+        !m_singularity.compare_exchange_weak(
+            tail->m_next,
+            head,
+            std::memory_order_release,
+            std::memory_order_relaxed))
+    {
+        /* void loop */;
+    }
 }

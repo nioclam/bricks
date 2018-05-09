@@ -2,43 +2,68 @@
  * MIT License
  * Copyright (C) 2014, Coin Lam.
  */
-#ifndef __BRICKS_OBJECT_OBJECTPAGE_H__
-#define __BRICKS_OBJECT_OBJECTPAGE_H__ 1
+#ifndef __BRICKS_OBJECTPOOL_OBJECTPAGE_H__
+#define __BRICKS_OBJECTPOOL_OBJECTPAGE_H__ 1
 
-#include "objecthost.h"
+#include <bricks/common.h>
+#include "objectunit.h"
+#include "objectreserved.h"
 
-namespace bricks_objectpool
+namespace bricks
 {
 
 /**
  * 对象页
  */
-template<int HostSize, int NumberHostOfPage = (8192 / HostSize)>
-class ObjectPage
+template<int Multi, int BaseSize, int Alignment>
+class ObjectPage : public AlignStub<ObjectReserved, Alignment>
 {
 public:
-	ObjectPage()
-		: m_nextPage(NULL)
-		, m_nextHost(0)
-	{
-	}
-
-	ObjectHost<HostSize> *nextHost()
-	{
-		if (m_nextHost < NumberHostOfPage)
-		{
-			return m_page + m_nextHost++;
-		}
-
-		return NULL;
-	}
+    typedef ObjectUnit<Multi, BaseSize>            Unit;
+    typedef ObjectPage<Multi, BaseSize, Alignment> Page;
+    typedef AlignStub<ObjectReserved, Alignment>   Stub;
 
 public:
-	ObjectPage<HostSize, NumberHostOfPage> *m_nextPage;
-	ObjectHost<HostSize>                    m_page[NumberHostOfPage];
-	int                                     m_nextHost;
+    static const int NumberOfUnits = (Stub::Size / sizeof(Unit));
+
+public:
+	ObjectPage()
+	{
+        int       count = Stub::size() / sizeof(Unit);
+        Unit     *units = (Unit *)Stub::page();
+        Resource *unit  = units + 1;
+        Resource *next  = nullptr;
+
+        for (auto i = 2; i < count; ++i)
+        {
+            next         = units + i;
+            unit->m_next = next;
+            unit         = next;
+        }
+
+        units[0].m_next = nullptr;
+	}
+
+    void init(void *page, size_t size)
+    {
+    }
+
+    Unit *once()
+    {
+        return (Unit *)Stub::page();
+    }
+
+    Unit *head()
+    {
+        return ((Unit *)Stub::page()) + 1;
+    }
+
+    Unit *tail()
+    {
+        return ((Unit *)Stub::page()) + Page::NumberOfUnits - 1;
+    }
 };
 
-} // namespace bricks_objectpool
+} // namespace bricks
 
-#endif /* #ifndef __BRICKS_OBJECT_OBJECTPAGE_H__ */
+#endif /* #ifndef __BRICKS_OBJECTPOOL_OBJECTPAGE_H__ */

@@ -22,6 +22,11 @@ public:
     virtual void hire(Resource *resource);
     virtual Resource *fire();
 
+    /**
+     * hire a list of resources
+     */
+    void hire(Resource *head, Resource *tail);
+
 protected:
     std::atomic<Resource *> m_singularity;
 };

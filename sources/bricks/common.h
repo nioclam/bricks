@@ -8,6 +8,7 @@
 #include <cassert>
 #include <climits>
 #include <cstddef>
+#include <cstdint>
 #include <cstdlib>
 #include <algorithm>
 
@@ -15,6 +16,9 @@
 #include "common/ceiling.h"
 #include "common/singleton.h"
 #include "common/failable.h"
+#include "common/secret.h"
+#include "common/align.h"
+#include "common/list.h"
 #include "common/pool.h"
 
 #endif /* #ifndef __BRICKS_COMMON_H__ */
