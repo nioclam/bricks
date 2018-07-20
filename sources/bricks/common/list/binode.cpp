@@ -2,17 +2,17 @@
  * MIT License
  * Copyright (C) 2018, Coin Lam.
  */
-#include "node.h"
+#include "binode.h"
 
 using namespace bricks;
 
-Node::Node()
+BINode::BINode()
     : m_prev(this)
     , m_next(this)
 {
 }
 
-void Node::enter(Node *stub)
+void BINode::enter(BINode *stub)
 {
     auto next = stub->m_next;
 
@@ -22,7 +22,7 @@ void Node::enter(Node *stub)
     next->m_prev = this;
 }
 
-void Node::leave()
+void BINode::leave()
 {
     auto prev = this->m_prev;
     auto next = this->m_next;

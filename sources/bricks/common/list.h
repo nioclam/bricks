@@ -5,6 +5,7 @@
 #ifndef __BRICKS_COMMON_LIST_H__
 #define __BRICKS_COMMON_LIST_H__ 1
 
-#include "list/list.h"
+#include "list/bilist.h"
+#include "list/unilist.h"
 
-#endif /* #ifndef __BRICKS_COMMON_LIST_H__ */
+#endif /* #ifndef __BRICKS_COMMON_BILIST_H__ */

@@ -18,9 +18,12 @@ libbricks_la_SOURCES = \
     bricks/common/align/alignhead.h \
     bricks/common/align/alignstub.h \
     bricks/common/list.h \
-    bricks/common/list/list.h \
-    bricks/common/list/node.h \
-    bricks/common/list/node.cpp \
+    bricks/common/list/unilist.h \
+    bricks/common/list/uninode.h \
+    bricks/common/list/uninode.cpp \
+    bricks/common/list/bilist.h \
+    bricks/common/list/binode.h \
+    bricks/common/list/binode.cpp \
     bricks/common/pool.h \
     bricks/common/pool/resource.h \
     bricks/common/pool/resource.cpp \
