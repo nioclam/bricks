@@ -13,6 +13,7 @@
 #include <algorithm>
 
 #include "coin.h"
+#include "common/byte.h"
 #include "common/ceiling.h"
 #include "common/singleton.h"
 #include "common/failable.h"

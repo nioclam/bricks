@@ -6,7 +6,7 @@
 #define __BRICKS_CHAOS_CODER_H__ 1
 
 #include <cstddef>
-#include "byte.h"
+#include <bricks/common.h>
 
 /**
  * 程序员是混乱的制造者。

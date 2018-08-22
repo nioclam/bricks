@@ -5,7 +5,7 @@
 #ifndef __BRICKS_CHAOS_BLOCK_H__
 #define __BRICKS_CHAOS_BLOCK_H__ 1
 
-#include "byte.h"
+#include <bricks/common.h>
 
 namespace bricks
 {

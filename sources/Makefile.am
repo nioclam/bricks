@@ -4,15 +4,16 @@ AM_CXXFLAGS=-Wall -g -std=c++17
 lib_LTLIBRARIES  = libbricks.la
 libbricks_la_SOURCES = \
     bricks/common.h \
+    bricks/common/byte.h \
     bricks/common/ceiling.h \
     bricks/common/singleton.h \
-	bricks/common/failable.h \
-	bricks/common/failable.cpp \
-	bricks/common/secret.h \
-	bricks/common/secret/secret.h \
-	bricks/common/secret/secret.cpp \
-	bricks/common/secret/secretseed.h \
-	bricks/common/secret/secretseed.cpp \
+    bricks/common/failable.h \
+    bricks/common/failable.cpp \
+    bricks/common/secret.h \
+    bricks/common/secret/secret.h \
+    bricks/common/secret/secret.cpp \
+    bricks/common/secret/secretseed.h \
+    bricks/common/secret/secretseed.cpp \
     bricks/common/align.h \
     bricks/common/align/aligndata.h \
     bricks/common/align/alignhead.h \
@@ -64,7 +65,6 @@ libbricks_la_SOURCES = \
     bricks/assist/azrael/referable.cpp \
 	bricks/assist/azrael/referencefreer.h \
 	bricks/assist/azrael/referencefreer.cpp \
-	bricks/assist/chaos/byte.h \
 	bricks/assist/chaos/block.h \
 	bricks/assist/chaos/piece.h \
 	bricks/assist/chaos/piece.cpp \

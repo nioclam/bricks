@@ -15,7 +15,7 @@ namespace bricks
     Chaos      *__chaos = bricks::this_player->stringPool; \
     ChaosFrame  __frame(__chaos); \
     Log         __error(For_Error, WHEREAMI); \
-	__error(__VA_ARGS__); \
+    __error(__VA_ARGS__); \
 }
 
 #define Warning(...) { \

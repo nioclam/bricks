@@ -9,8 +9,8 @@
  * 混沌的世界，唯有盘古能够开天辟地
  */
 
+#include <bricks/common.h>
 #include "../azrael.h"
-#include "byte.h"
 #include "piece.h"
 #include "block.h"
 

@@ -6,7 +6,7 @@
 #define __BRICKS_CHAOS_PIECE_H__ 1
 
 #include <cstddef>
-#include "byte.h"
+#include <bricks/common.h>
 
 namespace bricks
 {
