@@ -19,25 +19,23 @@ public:
 
 public:
 	/**
-	 * 获取失败状态
+	 * 判断是否已经失败
 	 *
 	 * @return true  已经失败
 	 *         false 没有失败
 	 */
-	bool failed();
+	bool isFailed();
 
 	/**
-	 * 更新失败状态
+	 * beFailed
 	 *
 	 * @return true  已经失败
 	 *         false 没有失败
 	 */
-	bool failAs(bool failed);
+	bool beFailed(bool failed);
 
 	/**
-	 * 重置失败状态
-	 *
-	 * 吸取教训，重新出发
+	 * 吸取教训
 	 */
 	void learnALesson();
 

@@ -11,12 +11,12 @@ Failable::Failable()
 {
 }
 
-bool Failable::failed()
+bool Failable::isFailed()
 {
 	return m_failed;
 }
 
-bool Failable::failAs(bool failed)
+bool Failable::beFailed(bool failed)
 {
 	if (failed)
 	{
