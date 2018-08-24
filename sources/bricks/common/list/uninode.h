@@ -15,7 +15,7 @@ public:
 
 public:
     void link(UNINode *next); // link to stub's next of list
-    UNINode *drop();              // drop stub's next of list
+    UNINode *drop();          // drop stub's next of list
 
 protected:
     UNINode *m_next;

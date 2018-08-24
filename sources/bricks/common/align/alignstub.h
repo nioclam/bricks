@@ -6,6 +6,7 @@
 #define __BRICKS_ALIGN_ALIGNSTUB_H__ 1
 
 #include <cstdio>
+#include <cstring>
 #include <cstddef>
 #include <cstdint>
 #include <new>
@@ -19,7 +20,7 @@ namespace bricks
  * that is also a power of two.
  */
 template <typename Reserved, int Alignment>
-class AlignStub : public bricks::AlignHead<Reserved>
+class alignas(Alignment) AlignStub : public bricks::AlignHead<Reserved>
 {
 public:
     enum
