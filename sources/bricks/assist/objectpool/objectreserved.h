@@ -11,11 +11,11 @@
 namespace bricks
 {
 
-class ObjectReserved : public Resource
+class ObjectReserved : public Duck
 {
 public:
 	ObjectReserved()
-		: Resource()
+		: Duck()
 	{
 	}
 

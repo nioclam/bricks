@@ -5,28 +5,28 @@
 #ifndef __BRICKS_POOL_QUEUE_H__
 #define __BRICKS_POOL_QUEUE_H__ 1
 
-#include "resource.h"
+#include "duck.h"
 #include "pool.h"
 
 namespace bricks
 {
 
-class Queue : public Pool<Resource>
+class Queue : public Pool<Duck>
 {
 public:
     Queue();
-    Queue(Resource *head, Resource *tail);
+    Queue(Duck *head, Duck *tail);
 
 public:
-    virtual void hire(Resource *resource);
-    virtual Resource *fire();
+    virtual void hire(Duck *duck);
+    virtual Duck *fire();
 
 public:
-    Resource *head();
+    Duck *head();
 
 protected:
-    Resource  m_singularity;
-    Resource *m_tail;
+    Duck  m_singularity;
+    Duck *m_tail;
 };
 
 }

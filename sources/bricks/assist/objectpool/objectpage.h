@@ -29,10 +29,10 @@ public:
 public:
 	ObjectPage()
 	{
-        int       count = Stub::size() / sizeof(Unit);
-        Unit     *units = (Unit *)Stub::page();
-        Resource *unit  = units + 1;
-        Resource *next  = nullptr;
+        int   count = Stub::size() / sizeof(Unit);
+        Unit *units = (Unit *)Stub::page();
+        Duck *unit  = units + 1;
+        Duck *next  = nullptr;
 
         for (auto i = 2; i < count; ++i)
         {

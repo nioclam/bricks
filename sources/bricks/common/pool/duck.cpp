@@ -2,29 +2,29 @@
  * MIT License
  * Copyright (C) 2018, Coin Lam.
  */
-#include "resource.h"
+#include "duck.h"
 
 using namespace bricks;
 
-Resource::Resource()
+Duck::Duck()
     : m_next(nullptr)
 {
 }
 
-Resource::Resource(Resource *next)
+Duck::Duck(Duck *next)
     : m_next(next)
 {
 }
 
-void Resource::link(Resource *next)
+void Duck::link(Duck *next)
 {
     next->m_next = m_next;
     this->m_next = next;
 }
 
-Resource *Resource::drop()
+Duck *Duck::drop()
 {
-    Resource *next = m_next;
+    Duck *next = m_next;
 
     if (m_next)
     {

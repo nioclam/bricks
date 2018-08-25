@@ -6,29 +6,29 @@
 #define __BRICKS_POOL_LOCKFREESTACK_H__ 1
 
 #include <atomic>
-#include "resource.h"
+#include "duck.h"
 #include "pool.h"
 
 namespace bricks
 {
 
-class LockFreeStack : public Pool<Resource>
+class LockFreeStack : public Pool<Duck>
 {
 public:
     LockFreeStack();
-    LockFreeStack(Resource *head);
+    LockFreeStack(Duck *head);
 
 public:
-    virtual void hire(Resource *resource);
-    virtual Resource *fire();
+    virtual void hire(Duck *duck);
+    virtual Duck *fire();
 
     /**
-     * hire a list of resources
+     * hire a list of ducks
      */
-    void hire(Resource *head, Resource *tail);
+    void hire(Duck *head, Duck *tail);
 
 protected:
-    std::atomic<Resource *> m_singularity;
+    std::atomic<Duck *> m_singularity;
 };
 
 }

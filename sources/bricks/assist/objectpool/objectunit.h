@@ -17,16 +17,16 @@ namespace bricks
  * sizeof(ObjectUnit) > sizeof(Object)
  */
 template<int Multi, int BaseSize>
-class ObjectUnit : public Resource
+class ObjectUnit : public Duck
 {
 public:
 	ObjectUnit()
-		: Resource()
+		: Duck()
 	{
 	}
 
 public:
-	char m_pad[Multi * BaseSize - sizeof(Resource)];
+	char m_pad[Multi * BaseSize - sizeof(Duck)];
 };
 
 } // namespace bricks

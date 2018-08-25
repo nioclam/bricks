@@ -11,19 +11,19 @@ LockFreeStack::LockFreeStack()
 {
 }
 
-LockFreeStack::LockFreeStack(Resource *head)
+LockFreeStack::LockFreeStack(Duck *head)
     : m_singularity(head)
 {
 }
 
-void LockFreeStack::hire(Resource *resource)
+void LockFreeStack::hire(Duck *duck)
 {
-    resource->m_next = m_singularity.load(std::memory_order_relaxed);
+    duck->m_next = m_singularity.load(std::memory_order_relaxed);
 
     while (
         !m_singularity.compare_exchange_weak(
-            resource->m_next,
-            resource,
+            duck->m_next,
+            duck,
             std::memory_order_release,
             std::memory_order_relaxed))
     {
@@ -31,7 +31,7 @@ void LockFreeStack::hire(Resource *resource)
     }
 }
 
-Resource *LockFreeStack::fire()
+Duck *LockFreeStack::fire()
 {
     auto head = m_singularity.load(std::memory_order_relaxed);
 
@@ -54,7 +54,7 @@ Resource *LockFreeStack::fire()
     return head;
 }
 
-void LockFreeStack::hire(Resource *head, Resource *tail)
+void LockFreeStack::hire(Duck *head, Duck *tail)
 {
     tail->m_next = m_singularity.load(std::memory_order_relaxed);
 

@@ -11,22 +11,22 @@ Stack::Stack()
 {
 }
 
-Stack::Stack(Resource *head)
+Stack::Stack(Duck *head)
     : m_singularity(head)
 {
 }
 
-void Stack::hire(Resource *resource)
+void Stack::hire(Duck *duck)
 {
-    m_singularity.link(resource);
+    m_singularity.link(duck);
 }
 
-Resource *Stack::fire()
+Duck *Stack::fire()
 {
     return m_singularity.drop();
 }
 
-Resource *Stack::head()
+Duck *Stack::head()
 {
     return m_singularity.m_next;
 }

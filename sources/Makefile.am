@@ -26,8 +26,8 @@ libbricks_la_SOURCES = \
     bricks/common/list/binode.h \
     bricks/common/list/binode.cpp \
     bricks/common/pool.h \
-    bricks/common/pool/resource.h \
-    bricks/common/pool/resource.cpp \
+    bricks/common/pool/duck.h \
+    bricks/common/pool/duck.cpp \
     bricks/common/pool/pool.h \
     bricks/common/pool/stack.h \
     bricks/common/pool/stack.cpp \

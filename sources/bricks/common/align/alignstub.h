@@ -32,7 +32,7 @@ public:
 public:
     AlignStub()
     {
-        if ((uintptr_t)this & AlignStub::Mask)
+        if ((uintptr_t)this & AlignStub::Mask && sizeof(AlignStub) != Alignment)
         {
             fprintf(
                 stderr,

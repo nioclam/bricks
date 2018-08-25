@@ -12,30 +12,30 @@ Queue::Queue()
 {
 }
 
-Queue::Queue(Resource *head, Resource *tail)
+Queue::Queue(Duck *head, Duck *tail)
     : m_singularity(head)
     , m_tail(tail)
 {
 }
 
-void Queue::hire(Resource *resource)
+void Queue::hire(Duck *duck)
 {
-    m_tail->link(resource);
-    m_tail = resource;
+    m_tail->link(duck);
+    m_tail = duck;
 }
 
-Resource *Queue::fire()
+Duck *Queue::fire()
 {
-    auto resource = m_singularity.drop();
+    auto duck = m_singularity.drop();
 
-    if (m_tail == resource) {
+    if (m_tail == duck) {
         m_tail = &m_singularity;
     }
 
-    return resource;
+    return duck;
 }
 
-Resource *Queue::head()
+Duck *Queue::head()
 {
     return m_singularity.m_next;
 }
