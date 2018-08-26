@@ -66,7 +66,7 @@ public:
      *
      * @return 内存块。当Block.data() == nullptr，表示出错
      */
-    Block access(size_t osition);
+    Block access(size_t position);
 };
 
 }

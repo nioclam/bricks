@@ -11,6 +11,7 @@
 #include <cstdint>
 #include <new>
 #include "alignhead.h"
+#include "../byte.h"
 
 namespace bricks
 {
@@ -20,7 +21,7 @@ namespace bricks
  * that is also a power of two.
  */
 template <typename Reserved, int Alignment>
-class alignas(Alignment) AlignStub : public bricks::AlignHead<Reserved>
+class AlignStub : public bricks::AlignHead<Reserved>
 {
 public:
     enum
@@ -28,6 +29,45 @@ public:
         Mask = ((Alignment ^ (Alignment - 1)) >> 1),
         Size = (Alignment - sizeof(AlignHead<Reserved>)),
     };
+
+public:
+    static void *operator new(size_t size)
+    {
+        void *align = nullptr;
+        int   errno = posix_memalign(&align, Alignment, Alignment);
+
+        if (0 != errno)
+        {
+            fprintf(
+                stderr,
+                "AlignStub#Alignment(%d): %s",
+                Alignment,
+                std::strerror(errno)
+            );
+            throw std::bad_alloc();
+        }
+
+        return align;
+    }
+
+    static void *operator new(size_t size, const std::nothrow_t &tag) noexcept
+    {
+        void *align = nullptr;
+        int   errno = posix_memalign(&align, Alignment, Alignment);
+
+        if (0 != errno)
+        {
+            fprintf(
+                stderr,
+                "AlignStub#Alignment(%d): %s",
+                Alignment,
+                std::strerror(errno)
+            );
+            return nullptr;
+        }
+
+        return align;
+    }
 
 public:
     AlignStub()
@@ -49,16 +89,13 @@ public:
 
     void *page()
     {
-        return m_page;
+        return static_cast<void *>(this + 1);
     }
 
     size_t size()
     {
         return AlignStub::Size;
     }
-
-protected:
-    char m_page[AlignStub::Size];
 };
 
 }
