@@ -21,5 +21,6 @@
 #include "common/align.h"
 #include "common/list.h"
 #include "common/pool.h"
+#include "common/lockfree.h"
 
 #endif /* #ifndef __BRICKS_COMMON_H__ */

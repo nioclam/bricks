@@ -35,6 +35,8 @@ libbricks_la_SOURCES = \
     bricks/common/pool/queue.cpp \
     bricks/common/pool/lockfreestack.h \
     bricks/common/pool/lockfreestack.cpp \
+    bricks/common/lockfree.h \
+    bricks/common/lockfree.cpp \
     bricks/assist.h \
     bricks/assist/objectpool.h \
     bricks/assist/objectpool/objectpool.h \
